@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website description for SEO purposes">
+    <meta name="robots" content="index, follow"> <!-- SEO Best Practices -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibility -->
+    
+    <title>Your Page Title</title>
+    
+    <!-- SEO: Open Graph for social media -->
+    <meta property="og:title" content="Page Title">
+    <meta property="og:description" content="Description of the page for social sharing.">
+    <meta property="og:image" content="path-to-image.jpg"> <!-- Image for social sharing -->
+    <meta property="og:url" content="your-page-url">
+    
+    <!-- Favicon for site -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+
+    <!-- PWA: Web App Manifest for installable app functionality -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Centralized CSS file for common elements -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Unique CSS for each page can be linked below -->
+    <link rel="stylesheet" href="assets/css/[page-name].css"> <!-- Replace [page-name] accordingly -->
+
+    <!-- Content Security Policy for enhanced security -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://trusted-cdn.com; style-src 'self' 'unsafe-inline';">
+
+    <!-- Preload critical assets for performance -->
+    <link rel="preload" href="assets/images/critical-image.jpg" as="image">
+
+    <!-- PWA: Ensures icons for app-like functionality -->
+    <link rel="icon" sizes="192x192" href="assets/images/icons/icon-192x192.png">
+    <link rel="icon" sizes="512x512" href="assets/images/icons/icon-512x512.png">
+
+    <!-- Accessibility: ARIA attributes (for screen readers) -->
+    <meta name="theme-color" content="#ffffff"> <!-- Theme color for mobile -->
+
+</head>
+
+<body>
+    <!-- Accessibility: Skip navigation link for keyboard users -->
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
+
+    <header>
+        <!-- Main Navigation -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="business-operation.html">Business Operation</a></li>
+                <li><a href="contact-center.html">Contact Center</a></li>
+                <li><a href="it-support.html">IT Support</a></li>
+                <li><a href="professionals.html">Professionals</a></li>
+                <li><a href="contact-us-join-us.html">Contact Us / Join Us</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Language and Dark/Light Mode Toggle (for accessibility & UX) -->
+        <div class="toggle-buttons">
+            <button id="language-toggle" aria-label="Toggle language">EN/ES</button>
+            <button id="theme-toggle" aria-label="Toggle theme">🌙/🌞</button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Placeholder for page-specific content -->
+        <section>
+            <h1>Page Title Here</h1>
+            <p>Content for this page goes here.</p>
+
+            <!-- Image/Video Placeholder -->
+            <div class="media-placeholder">
+                <!-- Image Here -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content -->
+        <p>&copy; 2025 Your Company. All rights reserved.</p>
+    </footer>
+
+    <!-- Centralized JS file for common functionalities -->
+    <script src="assets/js/main.js"></script>
+    <!-- Unique JS for each page can be linked below -->
+    <script src="assets/js/[page-name].js"></script> <!-- Replace [page-name] accordingly -->
+
+    <!-- PWA Service Worker (to be included in main.js) -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(function (error) {
+                console.log('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+</body>
+
+</html>
