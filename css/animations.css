@@ -1,0 +1,66 @@
+/* Smooth Transition for Theme Changes */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* Smooth Transition for Hover Effects */
+.service-card,
+.floating-icon {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Hover Animation for Service Cards */
+.service-card:hover {
+  transform: translateY(-5px); /* Lift the card */
+  background-color: #9b87f5; /* Change to purple */
+  color: white; /* Text becomes white on hover */
+}
+/* Hover Animation for Floating Icons */
+.floating-icon:hover {
+  background-color: #7e69ab; /* Change to darker purple */
+  transform: scale(1.1); /* Enlarge the icon */
+}
+/* Fade In Animation for Modal */
+.modal-overlay {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.modal-overlay.active {
+  opacity: 1; /* Fade in when modal is active */
+}
+/* Slide-In Animation for Modal Content */
+.modal-content {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.modal-overlay.active .modal-content {
+  transform: translateY(0); /* Slide in from top */
+  opacity: 1; /* Make modal content visible */
+}
+/* Button Hover Effects */
+.modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab; /* Darker purple */
+  transform: scale(1.05); /* Slightly enlarge button */
+}
+/* Fade In for Form Elements */
+.modal-content form input,
+.modal-content form textarea,
+.modal-content form button {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+.modal-content form input:focus,
+.modal-content form textarea:focus,
+.modal-content form button:focus {
+  opacity: 1; /* Fade in on focus */
+  transform: translateY(0); /* Move into place */
+}
+/* Success and Error Message Animations */
+.form-message {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.form-message.success,
+.form-message.error {
+  opacity: 1; /* Fade in success or error message */
+}
