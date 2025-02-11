@@ -1,0 +1,49 @@
+/* Default Light Mode */
+body[data-theme="light"] {
+  background-color: #f4f4f4; /* Light Background */
+  color: #333; /* Dark Text Color */
+}
+/* Light Mode Styles */
+body[data-theme="light"] .hero h2 {
+  color: #9b87f5; /* Purple Text for Headline */
+}
+body[data-theme="light"] .service-card {
+  background-color: white; /* White Background for Cards */
+  color: #333; /* Dark Text for Service Cards */
+  border: 2px solid #9b87f5; /* Purple Border */
+}
+body[data-theme="light"] .service-card:hover {
+  background-color: #9b87f5; /* Purple Hover Effect */
+  color: white; /* White Text on Hover */
+}
+body[data-theme="light"] .floating-icon {
+  background-color: #9b87f5; /* Purple Background */
+}
+body[data-theme="light"] .modal-content {
+  background-color: #7e69ab; /* Light Purple for Modals */
+}
+/* Dark Mode Styles */
+body[data-theme="dark"] {
+  background-color: #121212; /* Dark Background */
+  color: #e0e0e0; /* Light Text for Dark Mode */
+}
+/* Dark Mode Headline */
+body[data-theme="dark"] .hero h2 {
+  color: #bb86fc; /* Light Purple for Headline */
+}
+/* Dark Mode Service Cards */
+body[data-theme="dark"] .service-card {
+  background-color: #1c1c1c; /* Dark Background for Cards */
+  color: #e0e0e0; /* Light Text for Cards */
+  border: 2px solid #bb86fc; /* Light Purple Border */
+}
+body[data-theme="dark"] .service-card:hover {
+  background-color: #bb86fc; /* Light Purple Hover Effect */
+  color: #121212; /* Dark Text on Hover */
+}
+body[data-theme="dark"] .floating-icon {
+  background-color: #bb86fc; /* Light Purple Background */
+}
+body[data-theme="dark"] .modal-content {
+  background-color: #1c1c1c; /* Dark Background for Modals */
+}
