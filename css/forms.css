@@ -1,0 +1,77 @@
+/* Form Container Styling */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 8px;
+}
+/* Label Styling */
+.modal-content form label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+/* Input and Textarea Styling */
+.modal-content form input,
+.modal-content form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+/* Focused Input & Textarea Styles */
+.modal-content form input:focus,
+.modal-content form textarea:focus {
+  border-color: #9b87f5;
+  background-color: #fff;
+  outline: none;
+}
+/* Invalid Input/Field Styling */
+.modal-content form input:invalid,
+.modal-content form textarea:invalid {
+  border-color: red;
+  background-color: #ffe6e6;
+}
+/* Submit Button Styling */
+.modal-content form button[type="submit"] {
+  background-color: #9b87f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Hover Effect for Submit Button */
+.modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab;
+  transform: scale(1.05);
+}
+/* Disabled Submit Button */
+.modal-content form button[type="submit"]:disabled {
+  background-color: #d1d1d1;
+  cursor: not-allowed;
+}
+/* Textarea Styling */
+.modal-content form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+/* Success/Failure Message Styling */
+.form-message {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+.form-message.success {
+  color: green;
+}
+.form-message.error {
+  color: red;
+}
