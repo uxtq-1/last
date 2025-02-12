@@ -254,7 +254,6 @@ footer {
     grid-template-columns: 1fr; /* Single column layout on small screens */
   }
 }
-
 .modal-content form label {
   font-size: 1rem;
   font-weight: bold;
