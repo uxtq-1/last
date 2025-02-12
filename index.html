@@ -77,62 +77,69 @@
   <footer>
     <p>&copy; 2025 Ops Solutions Services. All rights reserved.</p>
   </footer>
-  <!-- Floating Icons for Contact & Join Modals -->
+<!-- Floating Icons for Contact Us and Join Us -->
 <div class="floating-icons">
-  <!-- Join Us Icon -->
-  <div class="floating-icon" data-modal="join-modal" title="Join Us" tabindex="0">
-    <i class="fas fa-user-plus"></i>
-  </div>
   <!-- Contact Us Icon -->
   <div class="floating-icon" data-modal="contact-modal" title="Contact Us" tabindex="0">
     <i class="fas fa-envelope-open-text"></i>
   </div>
+  <!-- Join Us Icon -->
+  <div class="floating-icon" data-modal="join-modal" title="Join Us" tabindex="0">
+    <i class="fas fa-user-plus"></i>
+  </div>
 </div>
-  <!-- Modals: Join Us and Contact Us -->
-  <!-- Join Us Modal -->
-  <!-- Link to modal.js Script -->
-<script src="js/modal.js"></script>
-  <div id="join-modal" class="modal-overlay">
-    <div class="modal-content">
-      <button class="close-modal" data-close>×</button>
-      <h3 id="joinModalTitle">Join Us</h3>
-      <p id="joinModalDesc">Fill out this form if you’d like to join our growing team of professionals.</p>
-      <form>
-        <label for="join-name">Name</label>
-        <input type="text" id="join-name" placeholder="Enter your name">
-        <label for="join-email">Email</label>
-        <input type="email" id="join-email" placeholder="Enter your email">
-        <label for="contact-number">Contact Number</label>
-        <input type="tel" id="contact-number" placeholder="Enter your contact number">
-        <label for="join-date">Date</label>
-        <input type="date" id="join-date">
-        <label for="join-time">Time</label>
-        <input type="time" id="join-time">
-        <label for="resume-upload">Upload Your Resume</label>
-        <input type="file" id="resume-upload">
-        <label for="cover-letter-upload">Upload Your Cover Letter</label>
-        <input type="file" id="cover-letter-upload">
-        <label for="join-comment">Comment</label>
-        <textarea id="join-comment" rows="4" placeholder="Tell us about yourself"></textarea>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+<!-- Contact Us Modal -->
+<div id="contact-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="close-modal" data-close>×</button>
+    <h3 id="contactModalTitle" data-en="Contact Us" data-es="Contáctanos">Contact Us</h3>
+    <p id="contactModalDesc" data-en="We’d love to hear from you! Reach out with any questions or requests." data-es="¡Nos encantaría saber de ti! Contáctanos con tus preguntas o solicitudes.">We’d love to hear from you! Reach out with any questions or requests.</p>
+    <form id="contact-form">
+      <label for="contact-name">Name</label>
+      <input type="text" id="contact-name" placeholder="Enter your name" required>
+      <label for="contact-email">Email</label>
+      <input type="email" id="contact-email" placeholder="Enter your email" required>
+      <label for="contact-time">Best convenient time to contact you</label>
+      <input type="datetime-local" id="contact-time" required>
+      <label for="contact-number">Contact Number</label>
+      <input type="tel" id="contact-number" placeholder="Enter your contact number" required>
+      <label for="contact-comment">Comments (What interests you about our services?)</label>
+      <textarea id="contact-comment" rows="4" placeholder="Tell us more" required></textarea>
+      <button type="submit">Send</button>
+    </form>
   </div>
-  <!-- Contact Us Modal -->
-  <div id="contact-modal" class="modal-overlay">
-    <div class="modal-content">
-      <button class="close-modal" data-close>×</button>
-      <h3 id="contactModalTitle">Contact Us</h3>
-      <p id="contactModalDesc">We’d love to hear from you! Reach out with any questions or requests.</p>
-      <form>
-        <label for="contact-name">Name</label>
-        <input type="text" id="contact-name" placeholder="Enter your name">
-        <label for="contact-message">Message</label>
-        <textarea id="contact-message" rows="4" placeholder="What’s on your mind?"></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
+</div>
+<!-- Join Us Modal -->
+<div id="join-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="close-modal" data-close>×</button>
+    <h3 id="joinModalTitle" data-en="Join Us" data-es="Únete a nosotros">Join Us</h3>
+    <p id="joinModalDesc" data-en="Fill out this form if you’d like to join our growing team of professionals." data-es="Complete este formulario si desea unirse a nuestro equipo de profesionales en crecimiento.">Fill out this form if you’d like to join our growing team of professionals.</p>
+    <form id="join-form">
+      <label for="join-name">Name</label>
+      <input type="text" id="join-name" placeholder="Enter your name" required>
+      <label for="join-email">Email</label>
+      <input type="email" id="join-email" placeholder="Enter your email" required>
+      <label for="join-time">Best convenient time to contact you</label>
+      <input type="datetime-local" id="join-time" required>
+      <label for="join-number">Contact Number</label>
+      <input type="tel" id="join-number" placeholder="Enter your contact number" required>
+      <label for="join-workdays">Workdays and Hours</label>
+      <input type="text" id="join-workdays" placeholder="e.g. Monday - Friday, 9 AM - 5 PM" required>
+      <label for="join-comment">Comments (What is your area of interest?)</label>
+      <textarea id="join-comment" rows="4" placeholder="Tell us more" required></textarea>
+      <label for="resume-upload">Upload Resume/CV</label>
+      <input type="file" id="resume-upload" required>
+      <label for="cover-letter-upload">Upload Cover Letter (Optional)</label>
+      <input type="file" id="cover-letter-upload">
+      <label for="join-availability">Are you available on holidays and weekends?</label>
+      <input type="text" id="join-availability" placeholder="Yes/No" required>
+      <label for="start-availability">Availability to start working</label>
+      <input type="text" id="start-availability" placeholder="e.g. Immediately" required>
+      <button type="submit">Send</button>
+    </form>
   </div>
+</div>
   <!-- Link to JS -->
   <script src="js/main.js"></script>
   <script src="js/theme-toggle.js"></script>
