@@ -1,20 +1,22 @@
-/* Resetting default margins and paddings for all elements */
+/* Reset default margins, paddings, and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* Global Body Styles */
+
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4; /* Default Light Background */
-  color: #333; /* Default Text Color */
+  background-color: #f4f4f4;
+  color: #333;
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
-/* Header Styling */
+
+/* Header Styles */
 header {
-  background-color: #9b87f5; /* Purple Header */
+  background-color: #9b87f5;
   color: white;
   padding: 15px 20px;
   text-align: center;
@@ -31,7 +33,8 @@ header nav a {
   color: white;
   font-weight: bold;
 }
-/* Toggle Container for Language and Theme */
+
+/* Language & Theme Toggle */
 header .toggle-container {
   position: absolute;
   top: 10px;
@@ -40,7 +43,7 @@ header .toggle-container {
   gap: 10px;
 }
 header .toggle {
-  background-color: #7e69ab; /* Light purple */
+  background-color: #7e69ab;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -48,120 +51,9 @@ header .toggle {
   border-radius: 20px;
 }
 header .toggle:hover {
-  background-color: #9b87f5; /* Hover effect */
+  background-color: #9b87f5;
 }
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 4rem 1rem;
-}
-.hero h2 {
-  font-size: 3rem;
-  color: #9b87f5; /* Purple */
-}
-.hero p {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-.hero-image {
-  width: 100%;
-  height: auto;
-  margin-top: 2rem;
-  border-radius: 10px;
-}
-/* Services Section */
-.services {
-  padding: 2rem;
-  background-color: #f1f0fb; /* Light background */
-}
-.services h2 {
-  font-size: 2rem;
-  text-align: center;
-  color: #7e69ab; /* Purple */
-  margin-bottom: 2rem;
-}
-.service-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 2rem;
-}
-.service-card {
-  background-color: white;
-  border: 2px solid #9b87f5;
-  border-radius: 10px;
-  padding: 2rem;
-  text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-  cursor: pointer;
-}
-.service-card:hover {
-  background-color: #9b87f5; /* Purple on hover */
-  color: white;
-  transform: translateY(-5px);
-}
-.service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.service-card p {
-  font-size: 1rem;
-}
-/* Footer Section */
-footer {
-  background-color: #7e69ab; /* Footer Purple */
-  color: white;
-  padding: 1rem;
-  text-align: center;
-}
-/* Floating Icons - Horizontal layout for Desktop */
-.floating-icons {
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  display: flex;
-  flex-direction: row; /* Align horizontally */
-  gap: 1rem;
-  z-index: 2000;
-}
-/* Each Floating Icon */
-.floating-icon {
-  background-color: #9b87f5; /* Primary purple color */
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 24px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-.floating-icon:hover {
-  background-color: #7e69ab; /* Darker purple on hover */
-  transform: scale(1.1); /* Slight enlargement */
-}
-/* Media Query for Smaller Screens - Stack icons vertically */
-@media screen and (max-width: 600px) {
-  .floating-icons {
-    flex-direction: column; /* Stack vertically on smaller screens */
-    bottom: 20px;  /* Adjust for smaller screens */
-    left: 10px;    /* Adjust for smaller screens */
-  }
-}
-/* Tooltip Styling for Floating Icons */
-.floating-icon[title]:hover::after {
-  content: attr(title); /* Show title as tooltip */
-  position: absolute;
-  bottom: 70px;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Black background */
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 14px;
-  white-space: nowrap;
-}
+
 /* Modal Styles */
 .modal-overlay {
   display: none;
@@ -180,49 +72,132 @@ footer {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
 }
-.modal-content h3 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+
+/* Join Us Form - Horizontal Layout */
+.modal-content form {
+  display: flex;
+  flex-wrap: wrap;  /* Allows the form to wrap when needed */
+  gap: 2rem;  /* Adds spacing between form fields */
 }
-.modal-content p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
+
+.modal-content form .form-item {
+  flex: 1 1 45%;  /* Allows the form fields to take up 45% of the width on larger screens */
+  min-width: 250px;  /* Ensures the form items have a minimum width */
 }
-.close-modal {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #9b87f5;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-.close-modal:hover {
-  background-color: #7e69ab;
-  color: #000;
-}
-/* Form Styles */
-.modal-content form label {
+
+.modal-content form .form-item label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 8px;
+  font-weight: bold;
 }
+
 .modal-content form input,
 .modal-content form textarea {
   width: 100%;
-  margin-bottom: 1rem;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.modal-content form button[type="submit"] {
+  width: auto;
+  padding: 12px 20px;
+  background-color: #9b87f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab;
+}
+
+/* Vertical Layout for Small Screens */
+@media screen and (max-width: 768px) {
+  /* Stack the form vertically */
+  .modal-content form {
+    flex-direction: column;
+  }
+
+  /* Add scrolling behavior for small screens */
+  .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  .modal-content form .form-item {
+    flex: 1 1 100%;  /* Ensures the form items take up 100% of the width on small screens */
+  }
+
+  .modal-content form button[type="submit"] {
+    width: 100%;  /* Makes the submit button take the full width on small screens */
+  }
+}
+
+/* Dark Mode */
+body[data-theme="dark"] {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .modal-content {
+  background-color: #1c1c1c;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .modal-content form input,
+body[data-theme="dark"] .modal-content form textarea {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #e0e0e0;
+}
+
+body[data-theme="dark"] .modal-content form button[type="submit"] {
+  background-color: #bb86fc;
+  color: #1c1c1c;
+}
+
+body[data-theme="dark"] .modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab;
+}
+
+/* Smooth Transitions for Inputs and Buttons */
+.modal-content form input:focus,
+.modal-content form textarea:focus {
+  border-color: #9b87f5;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.modal-content form button[type="submit"]:focus {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+}
+
+/* Accessibility Enhancements */
+.modal-content form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
   margin-bottom: 1rem;
   font-size: 1rem;
 }
+
 .modal-content form button[type="submit"] {
   background-color: #9b87f5;
   color: white;
@@ -233,30 +208,36 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s;
 }
+
 .modal-content form button[type="submit"]:hover {
   background-color: #7e69ab;
 }
-/* Dark Mode */
-body[data-theme="dark"] {
-  background-color: #121212;
-  color: #e0e0e0;
+
+/* Styling for file input */
+#join-modal input[type="file"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
 }
-body[data-theme="dark"] .hero h2 {
-  color: #bb86fc;
+
+/* Resize the text area */
+#join-modal textarea {
+  resize: vertical;
 }
-body[data-theme="dark"] .hero p {
-  color: #e0e0e0;
-}
-body[data-theme="dark"] .service-card {
-  background-color: #1c1c1c;
-  color: #e0e0e0;
-}
-body[data-theme="dark"] .service-card:hover {
-  background-color: #bb86fc;
-}
-body[data-theme="dark"] .floating-icon {
-  background-color: #bb86fc;
-}
-body[data-theme="dark"] .modal-content {
-  background-color: #1c1c1c;
+
+/* Make the form look good on smaller screens */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    padding: 2rem;
+  }
+
+  .modal-content form input,
+  .modal-content form textarea {
+    padding: 12px;
+  }
+
+  .modal-content form button[type="submit"] {
+    width: 100%;
+  }
 }
