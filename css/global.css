@@ -241,19 +241,61 @@ footer {
     width: 100%;
   }
 }
-<!-- Contact Us Modal -->
-<div id="contact-modal" class="modal-overlay">
-  <div class="modal-content">
-    <button class="close-modal" data-close>×</button>
-    <h3>Contact Us</h3>
-    <form>
-      <label for="contact-name">Name</label>
-      <input type="text" id="contact-name" placeholder="Enter your name">
+/* Modal Forms - Contact Us */
+.modal-content form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns layout for large screens */
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+/* For smaller screens, the form will stack vertically */
+@media screen and (max-width: 768px) {
+  .modal-content form {
+    grid-template-columns: 1fr; /* Single column layout on small screens */
+  }
+}
 
-      <label for="contact-message">Message</label>
-      <textarea id="contact-message" rows="4" placeholder="What’s on your mind?"></textarea>
-
-      <button type="submit">Send</button>
+.modal-content form label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+/* Styling for submit button */
+.modal-content form button[type="submit"] {
+  background-color: #9b87f5;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab;
+}
+/* Make sure the form looks good on smaller screens */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    padding: 2rem;
+  }
+  .modal-content form input,
+  .modal-content form textarea {
+    padding: 12px;
+  }
+  .modal-content form button[type="submit"] {
+    width: 100%;
+  }
+}
     </form>
   </div>
 </div>
