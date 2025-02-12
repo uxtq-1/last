@@ -241,6 +241,22 @@ footer {
     width: 100%;
   }
 }
+<!-- Contact Us Modal -->
+<div id="contact-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button class="close-modal" data-close>×</button>
+    <h3>Contact Us</h3>
+    <form>
+      <label for="contact-name">Name</label>
+      <input type="text" id="contact-name" placeholder="Enter your name">
+
+      <label for="contact-message">Message</label>
+      <textarea id="contact-message" rows="4" placeholder="What’s on your mind?"></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
 /* Dark Mode */
 body[data-theme="dark"] {
   background-color: #121212;
