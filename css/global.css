@@ -123,8 +123,9 @@ footer {
   gap: 1rem;
   z-index: 2000;
 }
+/* Each Floating Icon */
 .floating-icon {
-  background-color: var(--primary-purple);
+  background-color: #9b87f5; /* Primary purple color */
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -137,16 +138,15 @@ footer {
   transition: background-color 0.3s, transform 0.3s;
 }
 .floating-icon:hover {
-  background-color: var(--light-purple);
-  transform: scale(1.1);
-  color: #000;
+  background-color: #7e69ab; /* Darker purple on hover */
+  transform: scale(1.1); /* Slight enlargement */
 }
-/* Responsiveness: Stack icons vertically on smaller screens */
+/* Media Query for Smaller Screens - Stack icons vertically */
 @media screen and (max-width: 600px) {
   .floating-icons {
     flex-direction: column; /* Stack vertically on smaller screens */
-    bottom: 20px;
-    right: 10px;
+    bottom: 20px;  /* Adjust for smaller screens */
+    left: 10px;    /* Adjust for smaller screens */
   }
 }
 /* Tooltip Styling for Floating Icons */
@@ -217,19 +217,21 @@ footer {
 .modal-content form textarea {
   width: 100%;
   margin-bottom: 1rem;
-  padding: 0.8rem;
+  padding: 10px;
   border-radius: 5px;
-  border: none;
-  color: #333;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
 }
 .modal-content form button[type="submit"] {
   background-color: #9b87f5;
   color: white;
+  padding: 10px 15px;
   border: none;
   border-radius: 5px;
-  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s;
 }
 .modal-content form button[type="submit"]:hover {
   background-color: #7e69ab;
