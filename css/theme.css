@@ -1,6 +1,6 @@
 /* Default Light Mode */
 body[data-theme="light"] {
-  background-color: #f4f4f4; /* Light Background */
+  background-color: #9b87f5; /* Default Purple Background */
   color: #333; /* Dark Text Color */
 }
 /* Light Mode Styles */
@@ -14,7 +14,7 @@ body[data-theme="light"] .service-card {
 }
 body[data-theme="light"] .service-card:hover {
   background-color: #9b87f5; /* Purple Hover Effect */
-  color: white; /* White Text on Hover */
+  color: white; /* Text becomes white on hover */
 }
 body[data-theme="light"] .floating-icon {
   background-color: #9b87f5; /* Purple Background */
