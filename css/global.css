@@ -31,6 +31,7 @@ header nav a {
   color: white;
   font-weight: bold;
 }
+/* Toggle Container for Language and Theme */
 header .toggle-container {
   position: absolute;
   top: 10px;
@@ -105,18 +106,18 @@ header .toggle:hover {
 .service-card p {
   font-size: 1rem;
 }
-/* Footer */
+/* Footer Section */
 footer {
   background-color: #7e69ab; /* Footer Purple */
   color: white;
   padding: 1rem;
   text-align: center;
 }
-/* Floating Icons - Horizontal layout */
+/* Floating Icons - Horizontal layout for Desktop */
 .floating-icons {
   position: fixed;
   bottom: 80px;
-  left: 20px;
+  right: 20px;
   display: flex;
   flex-direction: row; /* Align horizontally */
   gap: 1rem;
@@ -144,18 +145,15 @@ footer {
 @media screen and (max-width: 600px) {
   .floating-icons {
     flex-direction: column; /* Stack vertically on smaller screens */
+    bottom: 20px;
+    right: 10px;
   }
 }
-/* Hover Effect for Floating Icons */
-.floating-icon:hover {
-  background-color: #7e69ab; /* Darker Purple on Hover */
-  transform: scale(1.1); /* Slightly increase size */
-}
-/* Tooltip Styling */
+/* Tooltip Styling for Floating Icons */
 .floating-icon[title]:hover::after {
   content: attr(title); /* Show title as tooltip */
   position: absolute;
-  bottom: 70px;  /* Position tooltip above the icon */
+  bottom: 70px;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7); /* Black background */
   color: white;
