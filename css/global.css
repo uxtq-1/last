@@ -1,20 +1,20 @@
-/* Reset default margins, paddings, and box-sizing */
+/* Resetting default margins and paddings for all elements */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-/* Global Styles */
+/* Global Body Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f4f4f4; /* Default Light Background */
+  color: #333; /* Default Text Color */
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
 }
-/* Header Styles */
+/* Header Styling */
 header {
-  background-color: #9b87f5;
+  background-color: #9b87f5; /* Purple Header */
   color: white;
   padding: 15px 20px;
   text-align: center;
@@ -31,7 +31,7 @@ header nav a {
   color: white;
   font-weight: bold;
 }
-/* Language & Theme Toggle */
+/* Toggle Container for Language and Theme */
 header .toggle-container {
   position: absolute;
   top: 10px;
@@ -40,7 +40,7 @@ header .toggle-container {
   gap: 10px;
 }
 header .toggle {
-  background-color: #7e69ab;
+  background-color: #7e69ab; /* Light purple */
   color: white;
   border: none;
   padding: 8px 15px;
@@ -48,7 +48,7 @@ header .toggle {
   border-radius: 20px;
 }
 header .toggle:hover {
-  background-color: #9b87f5;
+  background-color: #9b87f5; /* Hover effect */
 }
 /* Hero Section */
 .hero {
@@ -56,11 +56,11 @@ header .toggle:hover {
   padding: 4rem 1rem;
 }
 .hero h2 {
-  font-size: 2.5rem;
-  color: #9b87f5;
+  font-size: 3rem;
+  color: #9b87f5; /* Purple */
 }
 .hero p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
 }
 .hero-image {
@@ -69,21 +69,20 @@ header .toggle:hover {
   margin-top: 2rem;
   border-radius: 10px;
 }
-
 /* Services Section */
 .services {
   padding: 2rem;
-  background-color: #f1f0fb;
+  background-color: #f1f0fb; /* Light background */
 }
 .services h2 {
   font-size: 2rem;
   text-align: center;
-  color: #7e69ab;
+  color: #7e69ab; /* Purple */
   margin-bottom: 2rem;
 }
 .service-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 2rem;
 }
 .service-card {
@@ -96,22 +95,29 @@ header .toggle:hover {
   cursor: pointer;
 }
 .service-card:hover {
-  background-color: #9b87f5;
+  background-color: #9b87f5; /* Purple on hover */
   color: white;
   transform: translateY(-5px);
 }
-/* Footer */
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.service-card p {
+  font-size: 1rem;
+}
+/* Footer Section */
 footer {
-  background-color: #7e69ab;
+  background-color: #7e69ab; /* Footer Purple */
   color: white;
   padding: 1rem;
   text-align: center;
 }
-/* Floating Icons Container */
+/* Floating Icons - Horizontal layout for Desktop */
 .floating-icons {
   position: fixed;
-  bottom: 80px; /* Adjust to appear above footer */
-  right: 20px;  /* Space from the right side */
+  bottom: 80px;
+  right: 20px;
   display: flex;
   flex-direction: row; /* Align horizontally */
   gap: 1rem;
@@ -131,7 +137,6 @@ footer {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
-/* Hover effect for floating icons */
 .floating-icon:hover {
   background-color: #7e69ab; /* Darker purple on hover */
   transform: scale(1.1); /* Slight enlargement */
@@ -139,26 +144,23 @@ footer {
 /* Media Query for Smaller Screens - Stack icons vertically */
 @media screen and (max-width: 600px) {
   .floating-icons {
-    flex-direction: column; /* Stack icons vertically on small screens */
+    flex-direction: column; /* Stack vertically on smaller screens */
     bottom: 20px;  /* Adjust for smaller screens */
     left: 10px;    /* Adjust for smaller screens */
   }
 }
-  .hero h2 {
-    font-size: 2rem;
-  }
-  .hero p {
-    font-size: 1.1rem;
-  }
-  .floating-icons {
-    bottom: 10px;
-    right: 10px;
-  }
-  .floating-icon {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-  }
+/* Tooltip Styling for Floating Icons */
+.floating-icon[title]:hover::after {
+  content: attr(title); /* Show title as tooltip */
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 /* Modal Styles */
 .modal-overlay {
@@ -178,24 +180,47 @@ footer {
   width: 100%;
   max-width: 500px;
   border-radius: 10px;
-  padding: 1rem;
+  padding: 2rem;
   position: relative;
 }
-.modal-content form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.modal-content h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
-.modal-content form label {
+.modal-content p {
   font-size: 1rem;
-  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #9b87f5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.close-modal:hover {
+  background-color: #7e69ab;
+  color: #000;
+}
+/* Form Styles */
+.modal-content form label {
+  display: block;
+  margin-bottom: 0.5rem;
 }
 .modal-content form input,
 .modal-content form textarea {
   width: 100%;
+  margin-bottom: 1rem;
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  margin-bottom: 1rem;
   font-size: 1rem;
 }
 .modal-content form button[type="submit"] {
@@ -218,6 +243,9 @@ body[data-theme="dark"] {
 }
 body[data-theme="dark"] .hero h2 {
   color: #bb86fc;
+}
+body[data-theme="dark"] .hero p {
+  color: #e0e0e0;
 }
 body[data-theme="dark"] .service-card {
   background-color: #1c1c1c;
