@@ -112,39 +112,45 @@ footer {
   padding: 1rem;
   text-align: center;
 }
-/* Floating Icons */
+/* Floating Icons - Horizontal layout */
 .floating-icons {
   position: fixed;
-  bottom: 80px;  /* Adjust distance from bottom */
-  right: 20px;   /* Adjust distance from right */
+  bottom: 80px;
+  left: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Align horizontally */
   gap: 1rem;
-  z-index: 1000; /* Ensure icons are on top */
+  z-index: 2000;
 }
-
-/* Individual Floating Icon Styling */
 .floating-icon {
-  background-color: #9b87f5; /* Purple Background */
+  background-color: var(--primary-purple);
+  border-radius: 50%;
   width: 60px;
   height: 60px;
-  border-radius: 50%; /* Circular Shape */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: #fff;
   font-size: 24px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: background-color 0.3s, transform 0.3s;
 }
-
+.floating-icon:hover {
+  background-color: var(--light-purple);
+  transform: scale(1.1);
+  color: #000;
+}
+/* Responsiveness: Stack icons vertically on smaller screens */
+@media screen and (max-width: 600px) {
+  .floating-icons {
+    flex-direction: column; /* Stack vertically on smaller screens */
+  }
+}
 /* Hover Effect for Floating Icons */
 .floating-icon:hover {
   background-color: #7e69ab; /* Darker Purple on Hover */
   transform: scale(1.1); /* Slightly increase size */
 }
-
 /* Tooltip Styling */
 .floating-icon[title]:hover::after {
   content: attr(title); /* Show title as tooltip */
