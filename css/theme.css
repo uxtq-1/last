@@ -1,49 +1,72 @@
-/* Default Light Mode */
+/* Light Mode - Default Styling */
 body[data-theme="light"] {
-  background-color: #9b87f5; /* Default Purple Background */
-  color: #333; /* Dark Text Color */
+  background-color: #f4f4f4; /* Default light background */
+  color: #333; /* Default dark text color */
 }
-/* Light Mode Styles */
+/* Hero Section in Light Mode */
 body[data-theme="light"] .hero h2 {
-  color: #9b87f5; /* Purple Text for Headline */
+  color: #9b87f5; /* Purple color for heading */
 }
+body[data-theme="light"] .hero p {
+  color: #333; /* Dark text color for description */
+}
+/* Service Card - Light Mode */
 body[data-theme="light"] .service-card {
-  background-color: white; /* White Background for Cards */
-  color: #333; /* Dark Text for Service Cards */
-  border: 2px solid #9b87f5; /* Purple Border */
+  background-color: white;
+  color: #333; /* Dark text */
 }
 body[data-theme="light"] .service-card:hover {
-  background-color: #9b87f5; /* Purple Hover Effect */
-  color: white; /* Text becomes white on hover */
+  background-color: #9b87f5; /* Purple background on hover */
+  color: white; /* White text on hover */
 }
+/* Floating Icons - Light Mode */
 body[data-theme="light"] .floating-icon {
-  background-color: #9b87f5; /* Purple Background */
+  background-color: #9b87f5; /* Purple floating icon */
 }
-body[data-theme="light"] .modal-content {
-  background-color: #7e69ab; /* Light Purple for Modals */
+body[data-theme="light"] .floating-icon:hover {
+  background-color: #7e69ab; /* Darker purple on hover */
 }
-/* Dark Mode Styles */
+/* Dark Mode - Applied Styles */
 body[data-theme="dark"] {
-  background-color: #121212; /* Dark Background */
-  color: #e0e0e0; /* Light Text for Dark Mode */
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light text for dark theme */
 }
-/* Dark Mode Headline */
+/* Hero Section in Dark Mode */
 body[data-theme="dark"] .hero h2 {
-  color: #bb86fc; /* Light Purple for Headline */
+  color: #bb86fc; /* Light purple text in dark mode */
 }
-/* Dark Mode Service Cards */
+body[data-theme="dark"] .hero p {
+  color: #e0e0e0; /* Light text for description */
+}
+/* Service Card - Dark Mode */
 body[data-theme="dark"] .service-card {
-  background-color: #1c1c1c; /* Dark Background for Cards */
-  color: #e0e0e0; /* Light Text for Cards */
-  border: 2px solid #bb86fc; /* Light Purple Border */
+  background-color: #1c1c1c; /* Dark background for service cards */
+  color: #e0e0e0; /* Light text for dark theme */
 }
 body[data-theme="dark"] .service-card:hover {
-  background-color: #bb86fc; /* Light Purple Hover Effect */
-  color: #121212; /* Dark Text on Hover */
+  background-color: #bb86fc; /* Purple background on hover */
+  color: #121212; /* Dark text on hover */
 }
+/* Floating Icons - Dark Mode */
 body[data-theme="dark"] .floating-icon {
-  background-color: #bb86fc; /* Light Purple Background */
+  background-color: #bb86fc; /* Light purple floating icon in dark mode */
 }
+body[data-theme="dark"] .floating-icon:hover {
+  background-color: #7e69ab; /* Darker purple on hover */
+}
+/* Modal Content in Dark Mode */
 body[data-theme="dark"] .modal-content {
-  background-color: #1c1c1c; /* Dark Background for Modals */
+  background-color: #1c1c1c; /* Dark background for modals */
+}
+body[data-theme="dark"] .modal-content h3 {
+  color: #e0e0e0; /* Light text for headings */
+}
+body[data-theme="dark"] .modal-content p {
+  color: #e0e0e0; /* Light text for modal descriptions */
+}
+body[data-theme="dark"] .close-modal {
+  background-color: #7e69ab; /* Darker purple for close button */
+}
+body[data-theme="dark"] .close-modal:hover {
+  background-color: #9b87f5; /* Lighter purple on hover */
 }
