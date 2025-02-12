@@ -1,66 +1,102 @@
-/* Smooth Transition for Theme Changes */
-body {
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* General Transitions */
+* {
+  transition: all 0.3s ease; /* Smooth transitions for all properties */
 }
-/* Smooth Transition for Hover Effects */
-.service-card,
-.floating-icon {
-  transition: background-color 0.3s ease, transform 0.3s ease;
+/* Hero Section Animation */
+.hero h2,
+.hero p {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start slightly lower */
 }
-/* Hover Animation for Service Cards */
+.hero h2[data-en]:not([data-es=""]) {
+  animation: fadeInUp 1s forwards 0.3s;
+}
+.hero p[data-en]:not([data-es=""]) {
+  animation: fadeInUp 1s forwards 0.6s;
+}
+/* Fade In and Slide Up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Hover Effects for Service Cards */
+.service-card {
+  opacity: 1; /* Default opacity */
+  transform: translateY(0); /* Default position */
+}
 .service-card:hover {
-  transform: translateY(-5px); /* Lift the card */
-  background-color: #9b87f5; /* Change to purple */
-  color: white; /* Text becomes white on hover */
+  transform: translateY(-5px); /* Lift up on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-/* Hover Animation for Floating Icons */
-.floating-icon:hover {
-  background-color: #7e69ab; /* Change to darker purple */
-  transform: scale(1.1); /* Enlarge the icon */
+/* Service Card Animation */
+.service-card {
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Start lower */
+  animation: fadeInUp 1s forwards; /* Fade-in with slight upwards motion */
 }
-/* Fade In Animation for Modal */
+.service-card:nth-child(1) {
+  animation-delay: 0.1s; /* Delay for sequential appearance */
+}
+.service-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.service-card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.service-card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+/* Floating Icons Animation */
+.floating-icons {
+  opacity: 0; /* Initially hidden */
+  transform: translateX(100px); /* Start slightly off-screen to the right */
+  animation: slideInFromRight 0.5s forwards 1s; /* Slide in from the right */
+}
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Modal Animation */
 .modal-overlay {
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  animation: fadeIn 0.5s forwards;
 }
-.modal-overlay.active {
-  opacity: 1; /* Fade in when modal is active */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-/* Slide-In Animation for Modal Content */
-.modal-content {
-  transform: translateY(-50px);
-  opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+/* Close Button Animation */
+.close-modal {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
 }
-.modal-overlay.active .modal-content {
-  transform: translateY(0); /* Slide in from top */
-  opacity: 1; /* Make modal content visible */
+.close-modal:hover {
+  transform: rotate(180deg); /* Rotate on hover */
 }
 /* Button Hover Effects */
-.modal-content form button[type="submit"]:hover {
-  background-color: #7e69ab; /* Darker purple */
-  transform: scale(1.05); /* Slightly enlarge button */
+button[type="submit"] {
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-/* Fade In for Form Elements */
-.modal-content form input,
-.modal-content form textarea,
-.modal-content form button {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-}
-.modal-content form input:focus,
-.modal-content form textarea:focus,
-.modal-content form button:focus {
-  opacity: 1; /* Fade in on focus */
-  transform: translateY(0); /* Move into place */
-}
-/* Success and Error Message Animations */
-.form-message {
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-.form-message.success,
-.form-message.error {
-  opacity: 1; /* Fade in success or error message */
+button[type="submit"]:hover {
+  background-color: #7e69ab; /* Hover background color */
+  transform: scale(1.05); /* Slight scale effect */
 }
