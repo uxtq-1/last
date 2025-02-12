@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/animations.css">
   <!-- Font Awesome Stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
-  </head>
+</head>
   <!-- PWA Manifest and icon -->
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
@@ -78,20 +78,17 @@
     <p>&copy; 2025 Ops Solutions Services. All rights reserved.</p>
   </footer>
   <!-- Floating Icons for Contact & Join Modals -->
-<div class="floating-icons">
-  <!-- Join Us Icon -->
-  <div class="floating-icon" data-modal="join-modal" title="Join Us" tabindex="0">
-    <i class="fas fa-user-plus"></i>
+  <div class="floating-icons">
+    <!-- Floating icons are now horizontal -->
+    <div class="floating-icon" data-modal="join-modal" title="Join Us" tabindex="0">
+      <i class="fas fa-user-plus"></i>
+    </div>
+    <div class="floating-icon" data-modal="contact-modal" title="Contact Us" tabindex="0">
+      <i class="fas fa-envelope-open-text"></i>
+    </div>
   </div>
-  <!-- Contact Us Icon -->
-  <div class="floating-icon" data-modal="contact-modal" title="Contact Us" tabindex="0">
-    <i class="fas fa-envelope-open-text"></i>
-  </div>
-</div>
   <!-- Modals: Join Us and Contact Us -->
   <!-- Join Us Modal -->
-  <!-- Link to modal.js Script -->
-<script src="js/modal.js"></script>
   <div id="join-modal" class="modal-overlay">
     <div class="modal-content">
       <button class="close-modal" data-close>×</button>
@@ -134,9 +131,9 @@
     </div>
   </div>
   <!-- Link to JS -->
-  <script src="js/main.js"></script>
-  <script src="js/theme-toggle.js"></script>
-  <script src="js/language-toggle.js"></script>
+  <script src="js/modal.js"></script>  <!-- Modal functionality -->
+  <script src="js/theme-toggle.js"></script> <!-- Theme toggle functionality -->
+  <script src="js/language-toggle.js"></script> <!-- Language toggle functionality -->
   <script src="js/form-handler.js"></script>
   <script src="js/pwa-service-worker.js"></script>
   <script src="js/page-specific.js"></script>
