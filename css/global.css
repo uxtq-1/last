@@ -115,29 +115,48 @@ footer {
 /* Floating Icons */
 .floating-icons {
   position: fixed;
-  bottom: 80px;
-  right: 20px;
+  bottom: 80px;  /* Adjust distance from bottom */
+  right: 20px;   /* Adjust distance from right */
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  z-index: 1000;
+  z-index: 1000; /* Ensure icons are on top */
 }
+
+/* Individual Floating Icon Styling */
 .floating-icon {
-  background-color: #9b87f5;
+  background-color: #9b87f5; /* Purple Background */
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 50%; /* Circular Shape */
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.5rem;
+  font-size: 24px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
+
+/* Hover Effect for Floating Icons */
 .floating-icon:hover {
-  background-color: #7e69ab; /* Hover effect */
-  transform: scale(1.1);
+  background-color: #7e69ab; /* Darker Purple on Hover */
+  transform: scale(1.1); /* Slightly increase size */
+}
+
+/* Tooltip Styling */
+.floating-icon[title]:hover::after {
+  content: attr(title); /* Show title as tooltip */
+  position: absolute;
+  bottom: 70px;  /* Position tooltip above the icon */
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background */
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
 }
 /* Modal Styles */
 .modal-overlay {
