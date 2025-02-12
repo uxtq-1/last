@@ -3,149 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ops Solutions Services - Empowering remote services with cutting-edge strategies. Join or contact us for professional support.">
+  <meta name="description" content="OPS Online Support: Empowering remote solutions with cutting-edge strategies.">
   <meta name="robots" content="index, follow">
-  <meta name="keywords" content="OPS Online Support, remote solutions, logistics support, business operations, IT support">    
-  <title>OPS Solutions Services</title>
+  <meta name="keywords" content="OPS Online Support, remote solutions, logistics support, business operations, IT support">
+  <title>OPS Online Support</title>
+  <!-- Font Awesome Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">  
   <!-- Link to Centralized CSS -->
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/theme.css">
-  <link rel="stylesheet" href="css/forms.css">
-  <link rel="stylesheet" href="css/animations.css">
-  <!-- Font Awesome Stylesheet -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
-  </head>
-  <!-- PWA Manifest and icon -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/theme.css">
+  <link rel="stylesheet" href="assets/css/forms.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <!-- PWA Configuration and Manifest -->
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
 </head>
-<body data-theme="light">
-  <!-- Header: Navigation and Toggle Buttons -->
+<body>
+  <!-- Header (Navigation and Toggle Buttons) -->
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="business-operations.html">Business Operations</a></li>
+        <li><a href="business-operation.html">Business Operation</a></li>
         <li><a href="contact-center.html">Contact Center</a></li>
         <li><a href="it-support.html">IT Support</a></li>
-        <li><a href="professionals.html">Professionals</a></li>
+        <li><a href="contact-us-join-us.html">Contact Us / Join Us</a></li>
       </ul>
     </nav>
-    <div class="toggle-container">
-      <button class="toggle" id="theme-toggle">Dark</button>
-      <button class="toggle" id="language-toggle">EN</button>
+    <div class="toggle-buttons">
+      <button id="language-toggle">EN</button> <!-- Language toggle button -->
+      <button id="theme-toggle">Dark</button> <!-- Theme toggle button -->
     </div>
   </header>
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <h2 data-en="Welcome to Ops Solutions Services" data-es="Bienvenido a Ops Solutions Services">Welcome to Ops Solutions Services</h2>
-    <p data-en="Empowering remote solutions with cutting-edge strategies." data-es="Impulsando soluciones remotas con estrategias innovadoras.">Empowering remote solutions with cutting-edge strategies.</p>
-    <img src="assets/images/hero-image.jpg" alt="Hero Image" class="hero-image">
-  </section>
-  <!-- Services Section -->
-  <section id="services" class="services">
-    <h2 data-en="Our Services" data-es="Nuestros Servicios">Our Services</h2>
-    <div class="service-grid">
-      <div class="service-card" data-modal="business-modal">
-        <h3 data-en="Business Operations" data-es="Operaciones Comerciales">Business Operations</h3>
-        <p data-en="Optimize your processes with professional approaches to accounts payable, receivables, billing, and comprehensive workflow management." 
-           data-es="Optimice sus procesos con enfoques profesionales para cuentas por pagar, cuentas por cobrar, facturación y gestión integral de flujo de trabajo.">
-           Optimize your processes with professional approaches to accounts payable, receivables, billing, and comprehensive workflow management.
-        </p>
-      </div>
-      <div class="service-card" data-modal="contactcenter-modal">
-        <h3 data-en="Contact Center" data-es="Centro de Contacto">Contact Center</h3>
-        <p data-en="Deliver exceptional customer service with our state-of-the-art contact center solutions." data-es="Brinde un servicio al cliente excepcional con nuestras soluciones avanzadas de centro de contacto.">
-          Deliver exceptional customer service with our state-of-the-art contact center solutions.
-        </p>
-      </div>
-      <div class="service-card" data-modal="it-modal">
-        <h3 data-en="IT Support" data-es="Soporte IT">IT Support</h3>
-        <p data-en="Ensure seamless IT operations with our comprehensive support services." data-es="Garantice operaciones de TI sin problemas con nuestros servicios de soporte integral.">
-          Ensure seamless IT operations with our comprehensive support services.
-        </p>
-      </div>
-      <div class="service-card" data-modal="professionals-modal">
-        <h3 data-en="Professionals" data-es="Profesionales">Professionals</h3>
-        <p data-en="Receive reliable assistance from our experienced professionals tailored to your specific needs, anytime, anywhere." data-es="Reciba asistencia confiable de nuestros profesionales experimentados, adaptada a sus necesidades específicas, en cualquier momento y lugar.">
-          Receive reliable assistance from our experienced professionals tailored to your specific needs, anytime, anywhere.
-        </p>
-      </div>
+  <!-- Main Content Section (Page-specific content here) -->
+  <main id="main-content">
+    <section>
+      <h1>OPS Online Support</h1>
+      <p>Empowering remote solutions with cutting-edge strategies.</p>
+    </section>
+  </main>
+  <!-- Floating Icons for Contact Us and Join Us -->
+  <div class="floating-icons">
+    <!-- Contact Us Icon -->
+    <div class="floating-icon" data-modal="contact-modal" title="Contact Us" tabindex="0">
+      <i class="fas fa-envelope-open-text"></i>
+    </div>    
+    <!-- Join Us Icon -->
+    <div class="floating-icon" data-modal="join-modal" title="Join Us" tabindex="0">
+      <i class="fas fa-user-plus"></i>
     </div>
-  </section>
-  <!-- Footer Section -->
+  </div>
+  <!-- Contact Us Modal -->
+  <div id="contact-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" data-close>×</button>
+      <h3 id="contactModalTitle" data-en="Contact Us" data-es="Contáctanos">Contact Us</h3>
+      <p id="contactModalDesc" data-en="We’d love to hear from you! Reach out with any questions or requests." data-es="¡Nos encantaría saber de ti! Contáctanos con tus preguntas o solicitudes.">
+        We’d love to hear from you! Reach out with any questions or requests.
+      </p>
+      <form id="contact-form">
+        <label for="contact-name">Name</label>
+        <input type="text" id="contact-name" placeholder="Enter your name" required>
+        <label for="contact-email">Email</label>
+        <input type="email" id="contact-email" placeholder="Enter your email" required>
+        <label for="contact-time">Best convenient time to contact you</label>
+        <input type="datetime-local" id="contact-time" required>
+        <label for="contact-number">Contact Number</label>
+        <input type="tel" id="contact-number" placeholder="Enter your contact number" required>
+        <label for="contact-comment">Comments (What interests you about our services?)</label>
+        <textarea id="contact-comment" rows="4" placeholder="Tell us more" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <!-- Join Us Modal -->
+  <div id="join-modal" class="modal-overlay">
+    <div class="modal-content">
+      <button class="close-modal" data-close>×</button>
+      <h3 id="joinModalTitle" data-en="Join Us" data-es="Únete a nosotros">Join Us</h3>
+      <p id="joinModalDesc" data-en="Fill out this form if you’d like to join our growing team of professionals." data-es="Complete este formulario si desea unirse a nuestro equipo de profesionales en crecimiento.">
+        Fill out this form if you’d like to join our growing team of professionals.
+      </p>
+      <form id="join-form">
+        <label for="join-name">Name</label>
+        <input type="text" id="join-name" placeholder="Enter your name" required>
+        <label for="join-email">Email</label>
+        <input type="email" id="join-email" placeholder="Enter your email" required>
+        <label for="join-time">Best convenient time to contact you</label>
+        <input type="datetime-local" id="join-time" required>
+        <label for="join-number">Contact Number</label>
+        <input type="tel" id="join-number" placeholder="Enter your contact number" required>
+        <label for="join-workdays">Workdays and Hours</label>
+        <input type="text" id="join-workdays" placeholder="e.g. Monday - Friday, 9 AM - 5 PM" required>
+        <label for="join-comment">Comments (What is your area of interest?)</label>
+        <textarea id="join-comment" rows="4" placeholder="Tell us more" required></textarea>
+        <label for="resume-upload">Upload Resume/CV</label>
+        <input type="file" id="resume-upload" required>
+        <label for="cover-letter-upload">Upload Cover Letter (Optional)</label>
+        <input type="file" id="cover-letter-upload">
+        <label for="join-availability">Are you available on holidays and weekends?</label>
+        <input type="text" id="join-availability" placeholder="Yes/No" required>
+        <label for="start-availability">Availability to start working</label>
+        <input type="text" id="start-availability" placeholder="e.g. Immediately" required>
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Ops Solutions Services. All rights reserved.</p>
+    <p>&copy; 2025 OPS Online Support. All rights reserved.</p>
   </footer>
-<!-- Floating Icons for Contact Us and Join Us -->
-<div class="floating-icons">
-  <!-- Contact Us Icon -->
-  <div class="floating-icon" data-modal="contact-modal" title="Contact Us" tabindex="0">
-    <i class="fas fa-envelope-open-text"></i>
-  </div>
-  <!-- Join Us Icon -->
-  <div class="floating-icon" data-modal="join-modal" title="Join Us" tabindex="0">
-    <i class="fas fa-user-plus"></i>
-  </div>
-</div>
-<!-- Contact Us Modal -->
-<div id="contact-modal" class="modal-overlay">
-  <div class="modal-content">
-    <button class="close-modal" data-close>×</button>
-    <h3 id="contactModalTitle" data-en="Contact Us" data-es="Contáctanos">Contact Us</h3>
-    <p id="contactModalDesc" data-en="We’d love to hear from you! Reach out with any questions or requests." data-es="¡Nos encantaría saber de ti! Contáctanos con tus preguntas o solicitudes.">We’d love to hear from you! Reach out with any questions or requests.</p>
-    <form id="contact-form">
-      <label for="contact-name">Name</label>
-      <input type="text" id="contact-name" placeholder="Enter your name" required>
-      <label for="contact-email">Email</label>
-      <input type="email" id="contact-email" placeholder="Enter your email" required>
-      <label for="contact-time">Best convenient time to contact you</label>
-      <input type="datetime-local" id="contact-time" required>
-      <label for="contact-number">Contact Number</label>
-      <input type="tel" id="contact-number" placeholder="Enter your contact number" required>
-      <label for="contact-comment">Comments (What interests you about our services?)</label>
-      <textarea id="contact-comment" rows="4" placeholder="Tell us more" required></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
-<!-- Join Us Modal -->
-<div id="join-modal" class="modal-overlay">
-  <div class="modal-content">
-    <button class="close-modal" data-close>×</button>
-    <h3 id="joinModalTitle" data-en="Join Us" data-es="Únete a nosotros">Join Us</h3>
-    <p id="joinModalDesc" data-en="Fill out this form if you’d like to join our growing team of professionals." data-es="Complete este formulario si desea unirse a nuestro equipo de profesionales en crecimiento.">Fill out this form if you’d like to join our growing team of professionals.</p>
-    <form id="join-form">
-      <label for="join-name">Name</label>
-      <input type="text" id="join-name" placeholder="Enter your name" required>
-      <label for="join-email">Email</label>
-      <input type="email" id="join-email" placeholder="Enter your email" required>
-      <label for="join-time">Best convenient time to contact you</label>
-      <input type="datetime-local" id="join-time" required>
-      <label for="join-number">Contact Number</label>
-      <input type="tel" id="join-number" placeholder="Enter your contact number" required>
-      <label for="join-workdays">Workdays and Hours</label>
-      <input type="text" id="join-workdays" placeholder="e.g. Monday - Friday, 9 AM - 5 PM" required>
-      <label for="join-comment">Comments (What is your area of interest?)</label>
-      <textarea id="join-comment" rows="4" placeholder="Tell us more" required></textarea>
-      <label for="resume-upload">Upload Resume/CV</label>
-      <input type="file" id="resume-upload" required>
-      <label for="cover-letter-upload">Upload Cover Letter (Optional)</label>
-      <input type="file" id="cover-letter-upload">
-      <label for="join-availability">Are you available on holidays and weekends?</label>
-      <input type="text" id="join-availability" placeholder="Yes/No" required>
-      <label for="start-availability">Availability to start working</label>
-      <input type="text" id="start-availability" placeholder="e.g. Immediately" required>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-</div>
-  <!-- Link to JS -->
-  <script src="js/main.js"></script>
-  <script src="js/theme-toggle.js"></script>
-  <script src="js/language-toggle.js"></script>
-  <script src="js/form-handler.js"></script>
-  <script src="js/pwa-service-worker.js"></script>
-  <script src="js/page-specific.js"></script>
+  <!-- Link to JavaScript for Modal Handling -->
+  <script src="js/modal.js"></script> <!-- Modal functionality -->
+  <script src="js/language-toggle.js"></script> <!-- Language toggle functionality -->
+  <script src="js/theme-toggle.js"></script> <!-- Theme toggle functionality -->
 </body>
 </html>
