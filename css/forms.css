@@ -75,3 +75,61 @@
 .form-message.error {
   color: red;
 }
+/*I added this one under*/
+/* Modal Forms - General */
+.modal-content form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.modal-content form .form-item {
+  flex: 1 1 45%;
+  min-width: 250px;
+}
+.modal-content form .form-item label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.modal-content form input,
+.modal-content form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.modal-content form button[type="submit"] {
+  width: auto;
+  padding: 12px 20px;
+  background-color: #9b87f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+.modal-content form button[type="submit"]:hover {
+  background-color: #7e69ab;
+}
+/* Vertical Layout for Small Screens */
+@media screen and (max-width: 768px) {
+  .modal-content form {
+    flex-direction: column;
+  }
+  .modal-content {
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+  .modal-content form .form-item {
+    flex: 1 1 100%;
+  }
+  .modal-content form button[type="submit"] {
+    width: 100%;
+  }
+}
+
+
+
+
